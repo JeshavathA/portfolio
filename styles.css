@@ -220,21 +220,21 @@ h1{
 
 /* ===== SMALLER PHOTO ===== */
 .photo-card{
-  padding: 16px;
-  display: block;
-  height: auto;          /* CRITICAL */
-  overflow: visible;     /* CRITICAL */
+  width: 100%;
+  max-width: 220px;        /* 👈 PASSPORT SIZE */
+  margin: 0 auto;          /* center it */
+  padding: 8px;
+  border-radius: 18px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.14);
 }
 .profile-img{
   width: 100%;
-  height: auto;
-  max-height: 260px;       /* 👈 makes image smaller */
-  object-fit: contain;
+  height: 260px;           /* passport portrait */
+  object-fit: contain;     /* NO CROPPING */
   object-position: center;
-  border-radius: 16px;
-  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: 14px;
   background: transparent;
-  padding: 0;
   display: block;
 }
 .photo-fallback{
@@ -249,10 +249,10 @@ h1{
 
 /* ===== STATS ===== */
 .stat-grid{
-  margin-top: 14px;
+  margin-top: 12px;
   display:grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
+  grid-template-columns: 1fr;
+  gap: 10px;
 }
 .stat{
   padding: 12px;
