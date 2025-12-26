@@ -222,14 +222,21 @@ h1{
 /* ===== SMALLER PHOTO ===== */
 .photo-card{
   padding: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .profile-img{
   width: 100%;
-  height: 320px;
-  object-fit: cover;
-  object-position: center top; /* keeps head/hair visible */
+  height: auto;              /* important: let image keep its full shape */
+  max-height: 340px;         /* keeps it from becoming huge */
+  object-fit: contain;       /* show FULL image, no cropping */
+  object-position: center;   /* centered */
+  background: rgba(255,255,255,0.04);
   border-radius: 16px;
   border: 1px solid rgba(255,255,255,0.14);
+  padding: 8px;              /* keeps image inside the card nicely */
+  display: block;
 }
 .photo-fallback{
   height: 260px;
@@ -354,14 +361,16 @@ h1{
   animation: scroll 20s linear infinite;
 }
 .carousel img{
-  width: 260px;        /* bigger */
-  height: 160px;       /* bigger */
-  object-fit: contain; /* IMPORTANT: show full certificate */
+  width: 320px;              /* bigger */
+  height: 190px;             /* bigger */
+  object-fit: contain;       /* show FULL certificate, no cropping */
+  object-position: center;
   background: rgba(255,255,255,0.04);
-  padding: 8px;
+  padding: 10px;             /* prevents cutting at edges */
   border-radius: 14px;
   border: 1px solid rgba(255,255,255,0.14);
   box-shadow: 0 10px 28px rgba(0,0,0,0.35);
+  display: block;
 }
 .carousel:hover .carousel-track{
   animation-play-state: paused;
